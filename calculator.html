@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang = "en-US">
+ <head>
+  <meta charset = "utf-8">
+  <style>
+  * {
+       box-sizing: border-box;
+  }
+  body{
+     display: flex;
+     flex-flow: column nowrap;
+     align-items: center;
+     justify-content: center;
+  }
+  .calculator-body {
+       border: 1px solid rgba(0, 0, 0, 0.582);
+       box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+       width: 70vw;
+       height: 50vh;     
+       background-color: #eee;
+   }
+  .screen {
+       height: 20%;
+       margin: 0px;
+       background-color: transparent;
+   }
+  .smaller-screen {  
+       margin: 0px;
+       text-align : right;
+       font-family: sans-serif;
+       height: 30%;
+       color: rgba(0, 0, 0, 0.795) ;
+       background-color: transparent;
+   }
+  .bigger-screen {
+       overflow-x: auto;
+       margin: 0px;
+       text-align : right;
+       font-size: 3rem;
+       font-family: sans-serif;
+       height: 70%;
+       color: black;
+       background-color: transparent;
+   }
+  .left-side, .right-side {
+       width: 60%;
+       float: left;
+       height: 80%;
+   }
+   .right-side {
+       width: 37%;
+       float: right;
+  }
+  .left-side button {
+       float: left;
+       font-size: 1.5rem;
+       width: 33.3%;
+       height: 20%;
+       border: 1px solid #eee;
+       background-color: rgba(255, 255, 255, 0.9);
+       font-weight: bold;
+       font-family: verdana;
+  }
+  .left-side .different { 
+       width: 100%;     
+       background-color: rgba(245, 245, 245, 1);
+  }
+  .right-side button {
+       float: left;
+       width: 50%;
+       font-size: 1.5rem;
+       height: 25%;
+       border: 1px solid #eee;
+       background-color: rgba(245, 245, 245, 1);
+       font-weight: bold;
+       font-family: verdana;
+  }
+  button:hover, .different:hover {
+       background-color: rgba(225, 225, 225, 1);
+  }
+  
+  button:active, .different:active {
+       background-color: rgba(200, 200, 200, 1);
+  }
+
+  button.equals {
+       background-color: rgba(0, 0, 255, 0.7);
+  }
+  .equals:hover {
+       background-color: rgba(0, 0, 230, 1);
+  }
+  .equals:active {
+       background-color: rgba(0, 0, 200, 1);
+  }
+  </style>
+ </head>
+ <body>
+   <h1> A Simple Calculator</h1>
+   <br>
+   <p> Put in your values</p>
+
+
+   <div class = "calculator-body">
+
+    <!------- Display Screen------->
+    <div class="screen">
+     <p id="small" class="smaller-screen"></p>
+     <p id="big" class="bigger-screen">0</p> 
+    </div>
+
+    <!------- buttons------->  
+     <div class ="left-side">
+     <button class="different"> C </buton>
+
+    <!----- number buttons------>
+     <button> 7 </button>
+     <button> 8 </button>
+     <button> 9 </button>
+
+     <button> 4 </button>
+     <button> 5 </button>
+     <button> 6 </button>
+
+     <button> 1 </button>
+     <button> 2 </button>
+     <button> 3 </button>
+
+     <button> 00 </button>
+     <button class="zero"> 0 </button>
+     <button> . </button>
+     </div>
+     
+
+    <!------ Operator buttons ------>
+
+     <div class ="right-side">
+
+     <button onclick = ""> ← </button>
+     <button onclick = ""> % </button>
+
+     <button onclick = ""> ×² </button>
+     <button onclick = ""> ÷ </button>
+
+     <button onclick = ""> × </button>
+     <button onclick = ""> - </button>
+
+     <button onclick = ""> + </button>
+     <button onclick = "" class="equals"> = </button>
+     </div>
+
+   </div>
+   <script src = "./big.js"></script> <!--helps javacript with decimal numbers-->
+   <script src = "./calculator.js"></script>
+ </body>
+</html>
